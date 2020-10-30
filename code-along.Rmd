@@ -6,3 +6,41 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+## 1. confidence intervals
+
+```{r}
+otter_length <- c(38, 41, 50, 27, 32, 41, 48, 60, 43)
+
+t.test(otter_length)
+
+```
+
+## T-tests (1-sample t-test)
+
+See a claim: mean otter length is 50 inches
+
+```{r}
+otter_test <- t.test(x = otter_length, mu = 50)
+otter_test
+```
+
+try not to think about whether p-value is significant. take away - is it possible that my sample was taking from a population with a mean of 50, but there's only a 4.44% chance if the population mean is 50 inches that I could have taken a random sample from that pop and found a sample mean that is at least as different as mine is from that null hypothesis value.
+
+## Two-sample t-test
+
+```{r}
+desert_bighorns <- c(32, 44, 18, 26, 50, 33, 42, 20)
+sierra_bighorns <- c(28, 31, 40, 42, 26, 29, 31)
+
+t.test(x = desert_bighorns, y = sierra_bighorns)
+```
+
+.8849 means that theres 88.49% probability that these samples with means at least as different as ours are.
+
+
+
+
+
+
