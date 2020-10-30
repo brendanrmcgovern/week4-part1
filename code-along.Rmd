@@ -1,0 +1,8 @@
+---
+title: "Week4_part1_CIs and t-tests"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
